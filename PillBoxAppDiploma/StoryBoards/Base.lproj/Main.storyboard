@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uV3-ss-sgx">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--PillBox-->
+        <scene sceneID="hpH-pg-ONn">
+            <objects>
+                <tableViewController id="abf-J0-T9c" customClass="PillBoxTableViewController" customModule="PillBoxAppDiploma" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="ao3-YA-Ud7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pillBoxEntity" rowHeight="62" id="2y1-xF-XMY" customClass="PillBoxTableViewCell" customModule="PillBoxAppDiploma" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="62"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2y1-xF-XMY" id="cVs-SW-vKw">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="62"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBV-am-bzF">
+                                            <rect key="frame" x="23" y="18" width="52" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PK-fl-rXx">
+                                            <rect key="frame" x="333" y="36" width="42" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="5PK-fl-rXx" firstAttribute="top" secondItem="cVs-SW-vKw" secondAttribute="top" constant="36" id="24K-3t-BcW"/>
+                                        <constraint firstItem="dBV-am-bzF" firstAttribute="leading" secondItem="cVs-SW-vKw" secondAttribute="leadingMargin" constant="3" id="3NI-33-PKG"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="dBV-am-bzF" secondAttribute="bottom" constant="6" id="9dp-gd-hlH"/>
+                                        <constraint firstItem="5PK-fl-rXx" firstAttribute="leading" relation="lessThanOrEqual" secondItem="dBV-am-bzF" secondAttribute="trailing" constant="258" id="X1v-ec-T7W"/>
+                                        <constraint firstAttribute="bottom" secondItem="5PK-fl-rXx" secondAttribute="bottom" constant="9" id="Z2D-nz-RYv"/>
+                                        <constraint firstItem="dBV-am-bzF" firstAttribute="top" secondItem="cVs-SW-vKw" secondAttribute="topMargin" constant="7" id="cWq-Fg-Nnb"/>
+                                        <constraint firstAttribute="trailing" secondItem="5PK-fl-rXx" secondAttribute="trailing" constant="18" id="j7n-Sg-beU"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="countLabel" destination="5PK-fl-rXx" id="8oc-0i-xvk"/>
+                                    <outlet property="nameLabel" destination="dBV-am-bzF" id="CNt-jr-4xa"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="abf-J0-T9c" id="MIL-0M-RbV"/>
+                            <outlet property="delegate" destination="abf-J0-T9c" id="cdT-dC-WLR"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="PillBox" image="pill" catalog="system" selectedImage="pill" id="Phb-MU-cP9"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="wrc-m0-iTU">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="J1G-Jt-sV2"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="JG3-QJ-kdc" kind="show" identifier="showPillDetails" id="Ruf-tE-uAK"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O6g-eI-qO9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1278.6259541984732" y="1538.7323943661972"/>
+        </scene>
+        <!--Create Pill Box View Controller-->
+        <scene sceneID="me8-Th-Hkp">
+            <objects>
+                <viewController id="190-Es-AAO" customClass="CreatePillBoxViewController" customModule="PillBoxAppDiploma" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z7w-qI-4qI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="lHQ-CU-4jb">
+                                <rect key="frame" x="30" y="121.00000000000001" width="333" height="202.33333333333337"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xdu-bV-tud">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Count" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S8t-gU-4Ip">
+                                        <rect key="frame" x="0.0" y="56" width="333" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fSb-hx-SIz">
+                                        <rect key="frame" x="0.0" y="112" width="333" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Xc-tX-vfe">
+                                        <rect key="frame" x="0.0" y="168" width="333" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                        <connections>
+                                            <action selector="donebuttonPressed" destination="190-Es-AAO" eventType="touchUpInside" id="XnL-8y-UOp"/>
+                                            <segue destination="n7o-Kl-NEM" kind="unwind" unwindAction="pillBoxUnwindFor:" id="DWy-TE-0sS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J7H-EQ-8nF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="J7H-EQ-8nF" firstAttribute="trailing" secondItem="lHQ-CU-4jb" secondAttribute="trailing" constant="30" id="2fq-le-lBI"/>
+                            <constraint firstItem="lHQ-CU-4jb" firstAttribute="top" secondItem="J7H-EQ-8nF" secondAttribute="top" constant="77" id="buS-JM-KxP"/>
+                            <constraint firstItem="lHQ-CU-4jb" firstAttribute="leading" secondItem="J7H-EQ-8nF" secondAttribute="leading" constant="30" id="naf-fe-RBM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xt4-qJ-jul"/>
+                    <connections>
+                        <outlet property="pillCount" destination="S8t-gU-4Ip" id="Jiq-GM-MiA"/>
+                        <outlet property="pillDescription" destination="fSb-hx-SIz" id="TVD-eB-v8U"/>
+                        <outlet property="pillName" destination="xdu-bV-tud" id="8Ll-sc-G1u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9p1-Wj-XiI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="n7o-Kl-NEM" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2644" y="1142"/>
+        </scene>
+        <!--Pill Box Details View Controller-->
+        <scene sceneID="ayQ-5J-WRK">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="JG3-QJ-kdc" customClass="PillBoxDetailsViewController" customModule="PillBoxAppDiploma" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="puv-0e-jJu">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="MBa-uc-OQX">
+                                <rect key="frame" x="30" y="121.00000000000001" width="333" height="156.33333333333337"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BNT-Ly-VBz">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="18.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="TextFieldEditingEnd:" destination="JG3-QJ-kdc" eventType="editingDidEnd" id="VCS-Uw-A0Q"/>
+                                            <action selector="textFieldEditingBegin:" destination="JG3-QJ-kdc" eventType="editingDidBegin" id="hCO-5l-dtx"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Count" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IcS-R3-aft">
+                                        <rect key="frame" x="0.0" y="40.666666666666657" width="333" height="18.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="TextFieldEditingEnd:" destination="JG3-QJ-kdc" eventType="editingDidEnd" id="u9v-1U-ME6"/>
+                                            <action selector="textFieldEditingBegin:" destination="JG3-QJ-kdc" eventType="editingDidBegin" id="fLf-9I-79x"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UY9-VC-YJc">
+                                        <rect key="frame" x="0.0" y="81.333333333333343" width="333" height="18.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="TextFieldEditingEnd:" destination="JG3-QJ-kdc" eventType="editingDidEnd" id="eaP-cX-IWm"/>
+                                            <action selector="textFieldEditingBegin:" destination="JG3-QJ-kdc" eventType="editingDidBegin" id="k9t-tx-Fwg"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Je0-1c-44s">
+                                        <rect key="frame" x="0.0" y="121.99999999999999" width="333" height="34.333333333333329"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                        <connections>
+                                            <action selector="doneButtonDidTapped" destination="JG3-QJ-kdc" eventType="touchUpInside" id="BdO-Ui-2z7"/>
+                                            <segue destination="1ZQ-tp-nDf" kind="unwind" unwindAction="pillDetailsUnwindFor:" id="BrL-l5-2mM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="L01-Pk-b0u"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MBa-uc-OQX" firstAttribute="top" secondItem="L01-Pk-b0u" secondAttribute="top" constant="77" id="2MG-kB-eRW"/>
+                            <constraint firstItem="MBa-uc-OQX" firstAttribute="leading" secondItem="L01-Pk-b0u" secondAttribute="leading" constant="30" id="CkR-Hc-mKS"/>
+                            <constraint firstItem="L01-Pk-b0u" firstAttribute="trailing" secondItem="MBa-uc-OQX" secondAttribute="trailing" constant="30" id="I94-0J-t0b"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LWb-eg-vvC"/>
+                    <connections>
+                        <outlet property="countTextField" destination="IcS-R3-aft" id="YRJ-Hu-JR6"/>
+                        <outlet property="descTextField" destination="UY9-VC-YJc" id="ofT-sJ-0aa"/>
+                        <outlet property="nameTextField" destination="BNT-Ly-VBz" id="IDv-Lb-nJX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h8a-W4-1ae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="1ZQ-tp-nDf" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1279" y="2277"/>
+        </scene>
+        <!--Reminder Details View Controller-->
+        <scene sceneID="zR6-7Q-Ch7">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="ECU-ru-W6e" customClass="ReminderDetailsViewController" customModule="PillBoxAppDiploma" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dKA-bo-UP1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="QZA-R0-X1o">
+                                <rect key="frame" x="30" y="121.00000000000001" width="333" height="156.33333333333337"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zd3-bR-W1o">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="18.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="TextFieldEditingDidBegin:" destination="ECU-ru-W6e" eventType="editingDidEnd" id="KBc-er-HOI"/>
+                                            <action selector="TextfieldEditingDidBegin:" destination="ECU-ru-W6e" eventType="editingDidBegin" id="z8p-qN-Ua6"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qib-zp-Ybn">
+                                        <rect key="frame" x="0.0" y="40.666666666666657" width="333" height="18.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="TextFieldEditingDidBegin:" destination="ECU-ru-W6e" eventType="editingDidEnd" id="2VK-EY-xbv"/>
+                                            <action selector="TextfieldEditingDidBegin:" destination="ECU-ru-W6e" eventType="editingDidBegin" id="ZUw-vJ-5gP"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kkd-LF-KwQ">
+                                        <rect key="frame" x="0.0" y="81.333333333333343" width="333" height="18.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="TextFieldEditingDidBegin:" destination="ECU-ru-W6e" eventType="editingDidEnd" id="Oun-Ka-K4Z"/>
+                                            <action selector="TextfieldEditingDidBegin:" destination="ECU-ru-W6e" eventType="editingDidBegin" id="3zT-qh-gOj"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXT-SP-eh7">
+                                        <rect key="frame" x="0.0" y="121.99999999999999" width="333" height="34.333333333333329"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                        <connections>
+                                            <action selector="doneButtonDidTapped" destination="ECU-ru-W6e" eventType="touchUpInside" id="hrU-Jl-Qak"/>
+                                            <segue destination="MJK-AK-0df" kind="unwind" unwindAction="reminderDetailsUnwindFor:" id="DAm-eC-onU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Mp-e0-Ouw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QZA-R0-X1o" firstAttribute="top" secondItem="2Mp-e0-Ouw" secondAttribute="top" constant="77" id="5u0-Lu-CSU"/>
+                            <constraint firstItem="QZA-R0-X1o" firstAttribute="leading" secondItem="2Mp-e0-Ouw" secondAttribute="leading" constant="30" id="NeQ-kc-Be7"/>
+                            <constraint firstItem="2Mp-e0-Ouw" firstAttribute="trailing" secondItem="QZA-R0-X1o" secondAttribute="trailing" constant="30" id="Tao-Xx-CHV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ND9-hy-2qn"/>
+                    <connections>
+                        <outlet property="dateTextField" destination="qib-zp-Ybn" id="7v8-jw-Ouk"/>
+                        <outlet property="descTextField" destination="Kkd-LF-KwQ" id="m82-3n-ccw"/>
+                        <outlet property="nameTextField" destination="zd3-bR-W1o" id="e68-Tv-Hid"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t4z-pC-QUF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="MJK-AK-0df" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="565.64885496183206" y="2277.4647887323945"/>
+        </scene>
+        <!--reminder-->
+        <scene sceneID="QmT-XD-MVb">
+            <objects>
+                <tableViewController id="UcX-P9-3IC" customClass="ReminderTableViewController" customModule="PillBoxAppDiploma" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="ZAe-Ua-rrB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reminderEntity" rowHeight="83" id="F8F-yJ-kEx" customClass="ReminderTableViewCell" customModule="PillBoxAppDiploma" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="83"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F8F-yJ-kEx" id="xPI-S2-vDx">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="83"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZo-9y-EDp">
+                                            <rect key="frame" x="22" y="13" width="52" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d28-Q1-CCQ">
+                                            <rect key="frame" x="22" y="53" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C75-B6-2oS">
+                                            <rect key="frame" x="329" y="53" width="46" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="C75-B6-2oS" firstAttribute="leading" relation="lessThanOrEqual" secondItem="d28-Q1-CCQ" secondAttribute="trailing" constant="269" id="02q-ln-cft"/>
+                                        <constraint firstItem="d28-Q1-CCQ" firstAttribute="bottom" secondItem="xPI-S2-vDx" secondAttribute="bottomMargin" constant="2" id="9AL-8Y-lT5"/>
+                                        <constraint firstItem="C75-B6-2oS" firstAttribute="trailing" secondItem="xPI-S2-vDx" secondAttribute="trailingMargin" constant="2" id="Kaq-iB-RA9"/>
+                                        <constraint firstItem="uZo-9y-EDp" firstAttribute="top" secondItem="xPI-S2-vDx" secondAttribute="topMargin" constant="2" id="Kp8-tG-mud"/>
+                                        <constraint firstItem="uZo-9y-EDp" firstAttribute="leading" secondItem="xPI-S2-vDx" secondAttribute="leadingMargin" constant="2" id="eZb-eT-D8L"/>
+                                        <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="uZo-9y-EDp" secondAttribute="trailing" constant="301" id="mOL-1Q-aRV"/>
+                                        <constraint firstItem="C75-B6-2oS" firstAttribute="bottom" secondItem="xPI-S2-vDx" secondAttribute="bottomMargin" constant="2" id="sCb-wC-wGP"/>
+                                        <constraint firstItem="d28-Q1-CCQ" firstAttribute="leading" secondItem="xPI-S2-vDx" secondAttribute="leadingMargin" constant="2" id="vHl-PH-YiU"/>
+                                        <constraint firstAttribute="trailing" secondItem="C75-B6-2oS" secondAttribute="trailing" constant="18" id="vVH-Ex-wi7"/>
+                                        <constraint firstItem="d28-Q1-CCQ" firstAttribute="top" secondItem="uZo-9y-EDp" secondAttribute="bottom" constant="13" id="yW5-Py-CHv"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="C75-B6-2oS" id="YUW-1C-vVh"/>
+                                    <outlet property="mainLabel" destination="uZo-9y-EDp" id="EJt-rh-3Un"/>
+                                    <outlet property="secondaryLabel" destination="d28-Q1-CCQ" id="Gle-Lu-ngQ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UcX-P9-3IC" id="c9X-4i-ybY"/>
+                            <outlet property="delegate" destination="UcX-P9-3IC" id="j6D-49-Pun"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="reminder" image="clock" catalog="system" selectedImage="clock" id="TvF-gY-A8a"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="JHg-Uq-yUp"/>
+                    <connections>
+                        <segue destination="ECU-ru-W6e" kind="show" identifier="showDetails" id="bdU-sO-SwM"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hq0-Ig-zER" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565.64885496183206" y="1538.7323943661972"/>
+        </scene>
+        <!--Create Reminder View Controller-->
+        <scene sceneID="IWB-4X-RnJ">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="VQh-Sp-vXA" customClass="CreateReminderViewController" customModule="PillBoxAppDiploma" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uTL-xe-xvv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="s85-ks-bvJ">
+                                <rect key="frame" x="30" y="121.00000000000001" width="333" height="202.33333333333337"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gAJ-Xk-MPj">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5i1-QY-a4i">
+                                        <rect key="frame" x="0.0" y="56" width="333" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Entity to select" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aMq-7B-DnN">
+                                        <rect key="frame" x="0.0" y="112" width="333" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brk-id-aZP">
+                                        <rect key="frame" x="0.0" y="168" width="333" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                        <connections>
+                                            <action selector="buttonDidTapped" destination="VQh-Sp-vXA" eventType="touchUpInside" id="fjL-yD-ndk"/>
+                                            <segue destination="NWA-D5-Q9A" kind="unwind" unwindAction="creationUnwindFor:" id="eea-jX-JNF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="awp-zr-aRF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="awp-zr-aRF" firstAttribute="trailing" secondItem="s85-ks-bvJ" secondAttribute="trailing" constant="30" id="DXQ-Qs-tdL"/>
+                            <constraint firstItem="s85-ks-bvJ" firstAttribute="leading" secondItem="awp-zr-aRF" secondAttribute="leading" constant="30" id="K0N-MF-ZMV"/>
+                            <constraint firstItem="s85-ks-bvJ" firstAttribute="top" secondItem="awp-zr-aRF" secondAttribute="top" constant="77" id="O88-xC-lul"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FWk-5V-jCF"/>
+                    <connections>
+                        <outlet property="dateTextField" destination="5i1-QY-a4i" id="nj6-2O-rQ8"/>
+                        <outlet property="descTextField" destination="aMq-7B-DnN" id="njE-Hq-3bF"/>
+                        <outlet property="nameTextField" destination="gAJ-Xk-MPj" id="zPp-e1-dJ6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZNM-Ud-3FN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="NWA-D5-Q9A" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2645" y="421"/>
+        </scene>
+        <!--Start View Controller-->
+        <scene sceneID="bWp-VP-qTZ">
+            <objects>
+                <viewController storyboardIdentifier="StartViewController" id="uV3-ss-sgx" customClass="StartViewController" customModule="PillBoxAppDiploma" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3ro-Gw-Eus">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to PillBox App!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7F-gj-Ayy">
+                                <rect key="frame" x="36" y="408" width="313" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgj-6s-ls0">
+                                <rect key="frame" x="126" y="646" width="141" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Start Quick tip"/>
+                                <connections>
+                                    <segue destination="zsS-Ql-Hmv" kind="presentation" modalPresentationStyle="fullScreen" id="BAp-xG-h22"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R7h-YA-nm0">
+                                <rect key="frame" x="76" y="189" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aMJ-8u-zjH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="R7h-YA-nm0" id="OC2-lY-b2J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3FU-em-vRn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2101.5267175572517" y="734.50704225352115"/>
+        </scene>
+        <!--Welcome Page View Controller-->
+        <scene sceneID="wSn-Q3-Mlr">
+            <objects>
+                <viewController id="zsS-Ql-Hmv" customClass="WelcomePageViewController" customModule="PillBoxAppDiploma" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fpM-iZ-5hg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ct3-j7-mnf">
+                                <rect key="frame" x="80" y="791" width="233" height="26"/>
+                                <color key="pageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" systemColor="tintColor"/>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3oz-hT-PRa">
+                                <rect key="frame" x="23" y="59" width="346" height="690"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="8g9-up-hky"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="T7q-fF-cQU"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zvs-63-hhY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ct3-j7-mnf" firstAttribute="leading" secondItem="zvs-63-hhY" secondAttribute="leading" constant="80" id="GDv-Vb-Uqh"/>
+                            <constraint firstItem="zvs-63-hhY" firstAttribute="trailing" secondItem="ct3-j7-mnf" secondAttribute="trailing" constant="80" id="h8T-eN-EY2"/>
+                            <constraint firstItem="zvs-63-hhY" firstAttribute="bottom" secondItem="ct3-j7-mnf" secondAttribute="bottom" constant="35" id="pjX-T1-eUz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Uld-Yl-hDM"/>
+                    <connections>
+                        <outlet property="pageControl" destination="ct3-j7-mnf" id="Cxc-sJ-CAJ"/>
+                        <outlet property="scrollView" destination="3oz-hT-PRa" id="QZh-wb-w7c"/>
+                        <segue destination="q2a-oY-Id8" kind="presentation" identifier="end" modalPresentationStyle="fullScreen" id="Rmq-0g-so5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PLy-87-7hU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1187.0229007633586" y="734.50704225352115"/>
+        </scene>
+        <!--Navigation View Controller-->
+        <scene sceneID="Xhi-eY-qvA">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="q2a-oY-Id8" customClass="NavigationViewController" customModule="PillBoxAppDiploma" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vve-of-2tx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PrN-Zk-NDK" kind="relationship" relationship="rootViewController" id="EYI-CL-adg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9NP-xZ-3OE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-184" y="735"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="1HE-iE-EiY">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarViewController" automaticallyAdjustsScrollViewInsets="NO" id="PrN-Zk-NDK" customClass="TabBarViewController" customModule="PillBoxAppDiploma" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="VcC-o8-CTM">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="EiE-O6-AFL">
+                            <connections>
+                                <action selector="debugButton" destination="PrN-Zk-NDK" id="XRW-Mb-11m"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="XRv-XZ-GQI">
+                            <connections>
+                                <action selector="transitionToCreation" destination="PrN-Zk-NDK" id="4Kl-Oi-Es1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KOk-eq-6qz">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <outlet property="debugItem" destination="EiE-O6-AFL" id="ZOT-a4-Rc3"/>
+                        <outlet property="rightBarButton" destination="XRv-XZ-GQI" id="keU-nQ-KgQ"/>
+                        <segue destination="UcX-P9-3IC" kind="relationship" relationship="viewControllers" id="urz-Tb-gu5"/>
+                        <segue destination="abf-J0-T9c" kind="relationship" relationship="viewControllers" id="zrI-jJ-SBX"/>
+                        <segue destination="VQh-Sp-vXA" kind="show" identifier="reminderCreation" id="Qm0-MK-t8A"/>
+                        <segue destination="190-Es-AAO" kind="show" identifier="pillBoxCreation" id="a26-K3-ZcT"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7M0-le-zCo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749" y="735"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clock" catalog="system" width="128" height="123"/>
+        <image name="pill" catalog="system" width="128" height="123"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

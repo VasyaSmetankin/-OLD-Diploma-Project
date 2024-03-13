@@ -1,0 +1,621 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F1FB3752A3E2705008749BF /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 5F1FB3742A3E2705008749BF /* Realm */; };
+		5F1FB3772A3E2705008749BF /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5F1FB3762A3E2705008749BF /* RealmSwift */; };
+		5F1FB37E2A3E2857008749BF /* EmptyDataSet-Swift in Frameworks */ = {isa = PBXBuildFile; productRef = 5F1FB37D2A3E2857008749BF /* EmptyDataSet-Swift */; };
+		5F1FB3812A3E2AAA008749BF /* EmptyDataView in Frameworks */ = {isa = PBXBuildFile; productRef = 5F1FB3802A3E2AAA008749BF /* EmptyDataView */; };
+		5F1FB3842A3FCC5A008749BF /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1FB3832A3FCC5A008749BF /* WelcomePageViewController.swift */; };
+		5F1FB3862A412B75008749BF /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1FB3852A412B75008749BF /* StartViewController.swift */; };
+		5F52E9272A24DF0C0067A727 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F52E9262A24DF0C0067A727 /* NavigationViewController.swift */; };
+		5F6856FF2A2F3A12003DEF74 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6856FE2A2F3A12003DEF74 /* NotificationManager.swift */; };
+		5FD939572A2F5AC600CAF4BC /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD939562A2F5AC600CAF4BC /* ReminderTableViewCell.swift */; };
+		5FD939592A30C8C000CAF4BC /* PillBoxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD939582A30C8C000CAF4BC /* PillBoxTableViewCell.swift */; };
+		5FD939642A32286700CAF4BC /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD939632A32286700CAF4BC /* RealmModel.swift */; };
+		5FDC151F29FFF66D0094C01F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC151E29FFF66D0094C01F /* AppDelegate.swift */; };
+		5FDC152129FFF66D0094C01F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC152029FFF66D0094C01F /* SceneDelegate.swift */; };
+		5FDC152629FFF66D0094C01F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FDC152429FFF66D0094C01F /* Main.storyboard */; };
+		5FDC152829FFF66E0094C01F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FDC152729FFF66E0094C01F /* Assets.xcassets */; };
+		5FDC152B29FFF66E0094C01F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FDC152929FFF66E0094C01F /* LaunchScreen.storyboard */; };
+		5FDC153629FFF6CB0094C01F /* ReminderEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC153529FFF6CB0094C01F /* ReminderEntity.swift */; };
+		5FDC153929FFF8940094C01F /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC153829FFF8940094C01F /* TabBarViewController.swift */; };
+		5FDC153B29FFFDF00094C01F /* ReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC153A29FFFDF00094C01F /* ReminderTableViewController.swift */; };
+		5FDC153D29FFFE5E0094C01F /* PillBoxTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC153C29FFFE5E0094C01F /* PillBoxTableViewController.swift */; };
+		5FDC153F29FFFE960094C01F /* CreateReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC153E29FFFE960094C01F /* CreateReminderViewController.swift */; };
+		5FDC154129FFFEB10094C01F /* CreatePillBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC154029FFFEB10094C01F /* CreatePillBoxViewController.swift */; };
+		5FDC15452A0187D50094C01F /* ReminderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC15442A0187D50094C01F /* ReminderDetailsViewController.swift */; };
+		5FDC15482A0187FC0094C01F /* PillBoxDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC15472A0187FC0094C01F /* PillBoxDetailsViewController.swift */; };
+		5FDC154A2A0BAAA40094C01F /* PillBoxEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC15492A0BAAA40094C01F /* PillBoxEntity.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5F1FB3832A3FCC5A008749BF /* WelcomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
+		5F1FB3852A412B75008749BF /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		5F52E9262A24DF0C0067A727 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		5F6856FE2A2F3A12003DEF74 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		5FD939562A2F5AC600CAF4BC /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
+		5FD939582A30C8C000CAF4BC /* PillBoxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillBoxTableViewCell.swift; sourceTree = "<group>"; };
+		5FD939632A32286700CAF4BC /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		5FDC151B29FFF66D0094C01F /* PillBoxAppDiploma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PillBoxAppDiploma.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FDC151E29FFF66D0094C01F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5FDC152029FFF66D0094C01F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5FDC152529FFF66D0094C01F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5FDC152729FFF66E0094C01F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5FDC152A29FFF66E0094C01F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5FDC152C29FFF66E0094C01F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FDC153529FFF6CB0094C01F /* ReminderEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderEntity.swift; sourceTree = "<group>"; };
+		5FDC153829FFF8940094C01F /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		5FDC153A29FFFDF00094C01F /* ReminderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewController.swift; sourceTree = "<group>"; };
+		5FDC153C29FFFE5E0094C01F /* PillBoxTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillBoxTableViewController.swift; sourceTree = "<group>"; };
+		5FDC153E29FFFE960094C01F /* CreateReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReminderViewController.swift; sourceTree = "<group>"; };
+		5FDC154029FFFEB10094C01F /* CreatePillBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePillBoxViewController.swift; sourceTree = "<group>"; };
+		5FDC15442A0187D50094C01F /* ReminderDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderDetailsViewController.swift; sourceTree = "<group>"; };
+		5FDC15472A0187FC0094C01F /* PillBoxDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillBoxDetailsViewController.swift; sourceTree = "<group>"; };
+		5FDC15492A0BAAA40094C01F /* PillBoxEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillBoxEntity.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5FDC151829FFF66D0094C01F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1FB3772A3E2705008749BF /* RealmSwift in Frameworks */,
+				5F1FB3812A3E2AAA008749BF /* EmptyDataView in Frameworks */,
+				5F1FB37E2A3E2857008749BF /* EmptyDataSet-Swift in Frameworks */,
+				5F1FB3752A3E2705008749BF /* Realm in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5F1FB3732A3E2705008749BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5F1FB3822A3FCC2A008749BF /* WelcomePage */ = {
+			isa = PBXGroup;
+			children = (
+				5F1FB3852A412B75008749BF /* StartViewController.swift */,
+				5F1FB3832A3FCC5A008749BF /* WelcomePageViewController.swift */,
+			);
+			path = WelcomePage;
+			sourceTree = "<group>";
+		};
+		5F6856FD2A2F39F4003DEF74 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				5F6856FE2A2F3A12003DEF74 /* NotificationManager.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		5FD939552A2F578D00CAF4BC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5FD939562A2F5AC600CAF4BC /* ReminderTableViewCell.swift */,
+				5FD939582A30C8C000CAF4BC /* PillBoxTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5FD9395A2A30E5A000CAF4BC /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				5FD939632A32286700CAF4BC /* RealmModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		5FDC151229FFF66C0094C01F = {
+			isa = PBXGroup;
+			children = (
+				5FDC151D29FFF66D0094C01F /* PillBoxAppDiploma */,
+				5FDC152729FFF66E0094C01F /* Assets.xcassets */,
+				5FDC151C29FFF66D0094C01F /* Products */,
+				5F1FB3732A3E2705008749BF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5FDC151C29FFF66D0094C01F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC151B29FFF66D0094C01F /* PillBoxAppDiploma.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5FDC151D29FFF66D0094C01F /* PillBoxAppDiploma */ = {
+			isa = PBXGroup;
+			children = (
+				5FD9395A2A30E5A000CAF4BC /* DataModel */,
+				5F6856FD2A2F39F4003DEF74 /* Notifications */,
+				5FDC153729FFF6CE0094C01F /* Model */,
+				5FDC153229FFF6780094C01F /* App */,
+				5FDC153329FFF67F0094C01F /* ViewControllers */,
+				5FDC153429FFF6880094C01F /* StoryBoards */,
+			);
+			path = PillBoxAppDiploma;
+			sourceTree = "<group>";
+		};
+		5FDC153229FFF6780094C01F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC151E29FFF66D0094C01F /* AppDelegate.swift */,
+				5FDC152029FFF66D0094C01F /* SceneDelegate.swift */,
+				5FDC152C29FFF66E0094C01F /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5FDC153329FFF67F0094C01F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5F52E9262A24DF0C0067A727 /* NavigationViewController.swift */,
+				5FDC153829FFF8940094C01F /* TabBarViewController.swift */,
+				5F1FB3822A3FCC2A008749BF /* WelcomePage */,
+				5FDC15462A0187E00094C01F /* Details */,
+				5FDC154329FFFEFE0094C01F /* TableViews */,
+				5FDC154229FFFECC0094C01F /* EntityCreation */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5FDC153429FFF6880094C01F /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC152429FFF66D0094C01F /* Main.storyboard */,
+				5FDC152929FFF66E0094C01F /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		5FDC153729FFF6CE0094C01F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC153529FFF6CB0094C01F /* ReminderEntity.swift */,
+				5FDC15492A0BAAA40094C01F /* PillBoxEntity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5FDC154229FFFECC0094C01F /* EntityCreation */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC153E29FFFE960094C01F /* CreateReminderViewController.swift */,
+				5FDC154029FFFEB10094C01F /* CreatePillBoxViewController.swift */,
+			);
+			path = EntityCreation;
+			sourceTree = "<group>";
+		};
+		5FDC154329FFFEFE0094C01F /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+				5FD939552A2F578D00CAF4BC /* Cells */,
+				5FDC153A29FFFDF00094C01F /* ReminderTableViewController.swift */,
+				5FDC153C29FFFE5E0094C01F /* PillBoxTableViewController.swift */,
+			);
+			path = TableViews;
+			sourceTree = "<group>";
+		};
+		5FDC15462A0187E00094C01F /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC15442A0187D50094C01F /* ReminderDetailsViewController.swift */,
+				5FDC15472A0187FC0094C01F /* PillBoxDetailsViewController.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5FDC151A29FFF66D0094C01F /* PillBoxAppDiploma */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FDC152F29FFF66E0094C01F /* Build configuration list for PBXNativeTarget "PillBoxAppDiploma" */;
+			buildPhases = (
+				5FDC151729FFF66D0094C01F /* Sources */,
+				5FDC151829FFF66D0094C01F /* Frameworks */,
+				5FDC151929FFF66D0094C01F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F1FB3792A3E2715008749BF /* PBXTargetDependency */,
+				5F1FB37B2A3E2715008749BF /* PBXTargetDependency */,
+			);
+			name = PillBoxAppDiploma;
+			packageProductDependencies = (
+				5F1FB3742A3E2705008749BF /* Realm */,
+				5F1FB3762A3E2705008749BF /* RealmSwift */,
+				5F1FB37D2A3E2857008749BF /* EmptyDataSet-Swift */,
+				5F1FB3802A3E2AAA008749BF /* EmptyDataView */,
+			);
+			productName = PillBoxAppDiploma;
+			productReference = 5FDC151B29FFF66D0094C01F /* PillBoxAppDiploma.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5FDC151329FFF66C0094C01F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					5FDC151A29FFF66D0094C01F = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 5FDC151629FFF66C0094C01F /* Build configuration list for PBXProject "PillBoxAppDiploma" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5FDC151229FFF66C0094C01F;
+			packageReferences = (
+				5FD9395E2A3227BD00CAF4BC /* XCRemoteSwiftPackageReference "realm-swift" */,
+				5F1FB37C2A3E2857008749BF /* XCRemoteSwiftPackageReference "EmptyDataSet-Swift" */,
+				5F1FB37F2A3E2AAA008749BF /* XCRemoteSwiftPackageReference "EmptyDataView" */,
+			);
+			productRefGroup = 5FDC151C29FFF66D0094C01F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5FDC151A29FFF66D0094C01F /* PillBoxAppDiploma */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5FDC151929FFF66D0094C01F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FDC152B29FFF66E0094C01F /* LaunchScreen.storyboard in Resources */,
+				5FDC152829FFF66E0094C01F /* Assets.xcassets in Resources */,
+				5FDC152629FFF66D0094C01F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5FDC151729FFF66D0094C01F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FD939592A30C8C000CAF4BC /* PillBoxTableViewCell.swift in Sources */,
+				5F52E9272A24DF0C0067A727 /* NavigationViewController.swift in Sources */,
+				5FDC153929FFF8940094C01F /* TabBarViewController.swift in Sources */,
+				5FDC153F29FFFE960094C01F /* CreateReminderViewController.swift in Sources */,
+				5FDC15482A0187FC0094C01F /* PillBoxDetailsViewController.swift in Sources */,
+				5F1FB3862A412B75008749BF /* StartViewController.swift in Sources */,
+				5FD939642A32286700CAF4BC /* RealmModel.swift in Sources */,
+				5FDC154A2A0BAAA40094C01F /* PillBoxEntity.swift in Sources */,
+				5F6856FF2A2F3A12003DEF74 /* NotificationManager.swift in Sources */,
+				5F1FB3842A3FCC5A008749BF /* WelcomePageViewController.swift in Sources */,
+				5FDC151F29FFF66D0094C01F /* AppDelegate.swift in Sources */,
+				5FDC154129FFFEB10094C01F /* CreatePillBoxViewController.swift in Sources */,
+				5FDC15452A0187D50094C01F /* ReminderDetailsViewController.swift in Sources */,
+				5FD939572A2F5AC600CAF4BC /* ReminderTableViewCell.swift in Sources */,
+				5FDC153D29FFFE5E0094C01F /* PillBoxTableViewController.swift in Sources */,
+				5FDC152129FFF66D0094C01F /* SceneDelegate.swift in Sources */,
+				5FDC153B29FFFDF00094C01F /* ReminderTableViewController.swift in Sources */,
+				5FDC153629FFF6CB0094C01F /* ReminderEntity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5F1FB3792A3E2715008749BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 5F1FB3782A3E2715008749BF /* Realm */;
+		};
+		5F1FB37B2A3E2715008749BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 5F1FB37A2A3E2715008749BF /* RealmSwift */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5FDC152429FFF66D0094C01F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FDC152529FFF66D0094C01F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5FDC152929FFF66E0094C01F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FDC152A29FFF66E0094C01F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5FDC152D29FFF66E0094C01F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5FDC152E29FFF66E0094C01F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5FDC153029FFF66E0094C01F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3RGV42KN4P;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PillBoxAppDiploma/App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PillBox;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.hehehe.PillBoxAppDiploma;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5FDC153129FFF66E0094C01F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3RGV42KN4P;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PillBoxAppDiploma/App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PillBox;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.hehehe.PillBoxAppDiploma;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5FDC151629FFF66C0094C01F /* Build configuration list for PBXProject "PillBoxAppDiploma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FDC152D29FFF66E0094C01F /* Debug */,
+				5FDC152E29FFF66E0094C01F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FDC152F29FFF66E0094C01F /* Build configuration list for PBXNativeTarget "PillBoxAppDiploma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FDC153029FFF66E0094C01F /* Debug */,
+				5FDC153129FFF66E0094C01F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5F1FB37C2A3E2857008749BF /* XCRemoteSwiftPackageReference "EmptyDataSet-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Xiaoye220/EmptyDataSet-Swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		5F1FB37F2A3E2AAA008749BF /* XCRemoteSwiftPackageReference "EmptyDataView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/anup-deshpande/EmptyDataView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		5FD9395E2A3227BD00CAF4BC /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5F1FB3742A3E2705008749BF /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FD9395E2A3227BD00CAF4BC /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		5F1FB3762A3E2705008749BF /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FD9395E2A3227BD00CAF4BC /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		5F1FB3782A3E2715008749BF /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FD9395E2A3227BD00CAF4BC /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		5F1FB37A2A3E2715008749BF /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FD9395E2A3227BD00CAF4BC /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		5F1FB37D2A3E2857008749BF /* EmptyDataSet-Swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F1FB37C2A3E2857008749BF /* XCRemoteSwiftPackageReference "EmptyDataSet-Swift" */;
+			productName = "EmptyDataSet-Swift";
+		};
+		5F1FB3802A3E2AAA008749BF /* EmptyDataView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F1FB37F2A3E2AAA008749BF /* XCRemoteSwiftPackageReference "EmptyDataView" */;
+			productName = EmptyDataView;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 5FDC151329FFF66C0094C01F /* Project object */;
+}
